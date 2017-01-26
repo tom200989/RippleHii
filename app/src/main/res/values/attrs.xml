@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name = "RippleHii">
+        <!-- 波纹速度 0.0 ~ 2.0 default: 1.2f -->
+        <attr name = "speed" format = "float" />
+        <!-- 最大透明度 0.0 ~ 1.0 default: 0.3f -->
+        <attr name = "maxAlpha" format = "float" />
+        <!-- 最小透明度 0.0 ~ 1.0 default: 0.25f -->
+        <attr name = "minAlpha" format = "float" />
+        <!-- 波纹颜色 default: 16进制代号为009688的颜色 -->
+        <attr name = "color" format = "color" />
+    </declare-styleable>
+</resources>
