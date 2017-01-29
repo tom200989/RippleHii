@@ -80,13 +80,13 @@ public class RippleHii extends View implements View.OnTouchListener {
         initPaint();
         // 3.设置触摸监听器
         setOnTouchListener(this);
-        
+
         // 4.添加手势识别器, 用于取代ontouch事件的event,因为自定义view的event不能响应action_down.
         
         /* 使用手势识别器的目的是为了防止自定义的Ontouch出现了action_down不能响应, 并且简化一大堆的自定义手势逻辑
          * 如果不使用手势识别器则需要自定义xy坐标. 比较麻烦
          * */
-        
+
         gestureDetector = new GestureDetector(context, new GestureListener(context) {
             @Override
             public void getUpXY(float x, float y) {
@@ -224,9 +224,7 @@ public class RippleHii extends View implements View.OnTouchListener {
      */
     private void drawRipple(final float x, final float y) {
         can = false;
-        // 波纹执行完成的接口行为
-        setFinish();
-        
+
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -265,7 +263,8 @@ public class RippleHii extends View implements View.OnTouchListener {
                         changeRadiu = DEFAULTREDIU;
                         alpha = MAXALPHA;
                         can = true;
-                       
+                        // 波纹执行完成的接口行为
+                        setFinish();
                     }
                 });
 
