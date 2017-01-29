@@ -224,6 +224,9 @@ public class RippleHii extends View implements View.OnTouchListener {
      */
     private void drawRipple(final float x, final float y) {
         can = false;
+        // 波纹执行完成的接口行为
+        setFinish();
+        
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -262,8 +265,7 @@ public class RippleHii extends View implements View.OnTouchListener {
                         changeRadiu = DEFAULTREDIU;
                         alpha = MAXALPHA;
                         can = true;
-                        // 波纹执行完成的接口行为
-                        setFinish();
+                       
                     }
                 });
 
