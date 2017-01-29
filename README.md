@@ -46,7 +46,7 @@ So you have to modify the following conditions to use the library
 2.  **Add the dependency**
 
 		dependencies {
-		    compile 'com.github.tom200989:RippleHii:v1'
+		    compile 'com.github.tom200989:RippleHii:v3'
 		}
 3. **Copy the codes In your layout**
 
